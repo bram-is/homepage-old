@@ -15,6 +15,8 @@ const parseTransform = require("./src/transforms/parse-transform.js");
 const site = require("./src/_data/site.json");
 
 module.exports = function (config) {
+  const cachebuster = Math.round(new Date().getTime() / 1000);
+
   config.addNunjucksShortcode("ogImageSource", function ({ url, inputPath }) {
     let domain = "https://bram.is";
 
@@ -22,13 +24,13 @@ module.exports = function (config) {
     if (inputPath.startsWith("./src/writing/")) {
       return `https://screenshot.bram.is/${encodeURIComponent(
         `${domain}/opengraph${url}`
-      )}/opengraph/`;
+      )}/opengraph/_${cachebuster}`;
     }
 
     // raw screenshot
     return `https://screenshot.bram.is/${encodeURIComponent(
       `${domain}${url}`
-    )}/opengraph/`;
+    )}/opengraph/_${cachebuster}`;
   });
 
   // Filters
