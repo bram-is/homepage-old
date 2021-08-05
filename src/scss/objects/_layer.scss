@@ -16,8 +16,11 @@
     ========================================================================= */
 
 .o-layer {
-  padding-block-start: space.get('base');
-  padding-block-end: space.get('base');
+  &,
+  .c-og & {
+    padding-block-start: space.get('base');
+    padding-block-end: space.get('base');
+  }
 
   @include responsive.mq(lap) {
     padding-block-start: space.get('large');

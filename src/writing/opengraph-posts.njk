@@ -9,6 +9,14 @@ eleventyComputed:
   sourceUrl: "https://bram.is{{ post.url }}"
 ---
 
+{% block head %}
+<style>
+  html {
+    font-size: 2rem;
+  }
+</style>
+{% endblock %}
+
 {# Intro content #}
 {% set introHeading = post.data.title %}
 {% set introElement = "header" %}
