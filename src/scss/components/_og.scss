@@ -45,6 +45,11 @@
   }
 }
 
-.c-og__avatar {
+.c-og__wrap-avatar {
   inline-size: rem.convert(defaults.$baseline * 7);
+}
+
+.c-og__avatar {
+  border-radius: 50%;
+  background-size: cover;
 }

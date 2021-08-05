@@ -27,12 +27,10 @@ eleventyComputed:
   </div>
   <footer class="o-grid  o-layer--small  t-dash-bg">
     <div class="o-layout  o-layout--align-block-center  o-layout--gap-small">
-      <div class="c-og__avatar |  o-layout__fit">
-        <picture>
-          <source srcset="/images/avatar.webp" type="image/webp">
-          <source srcset="/images/avatar.jpg" type="image/jpeg">
-          <img class="c-avatar" src="/images/avatar.jpg" alt="Bram Smulders eating a steak" loading="lazy" width="320" height="320">
-        </picture>
+      <div class="c-og__wrap-avatar |  o-layout__fit">
+        <div class="o-aspect-ratio">
+          <div class="c-og__avatar  o-aspect-ratio__item" style="background-image: url(/images/avatar.jpg);"></div>
+        </div>
       </div>
       <div class="o-layout__fill">
         <p>{{ site.authorName }} - <a href="https://twitter.com/bramsmulders">{{ site.authorHandle }}</a></p>
