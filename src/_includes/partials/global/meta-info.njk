@@ -18,10 +18,17 @@
 <meta property="og:title" content="{{ pageTitle }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ currentUrl }}" />
+<meta property="og:image" content="{% ogImageSource page %}" />
+<meta property="og:image:alt" content="Page image for {{ site.shortDesc }}" />
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:image" content="{% ogImageSource page %}" />
+<meta name="twitter:image:alt" content="Page image for {{ site.shortDesc }}" />
 {% if site.authorHandle %}
   <meta name="twitter:creator" content="@{{ site.authorHandle | replace('@', '') }}" />
 {% endif %}
+
 
 {% if metaDesc %}
   <meta name="description" content="{{ metaDesc }}" />
@@ -29,10 +36,6 @@
   <meta property="og:description" content="{{ metaDesc }}" />
 {% endif %}
 
-<meta property="og:image" content="{% ogImageSource page %}" />
-<meta name="twitter:image" content="{% ogImageSource page %}" />
-<meta property="og:image:alt" content="Page image for {{ site.shortDesc }}" />
-<meta name="twitter:image:alt" content="Page image for {{ site.shortDesc }}" />
 
 {% if site.paymentPointer %}
   <meta name="monetization" content="{{ site.paymentPointer }}" />
