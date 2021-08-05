@@ -60,7 +60,7 @@
     "test": "npm run lint && npm run gzip",
     "start": "npm run svg && concurrently \"npm run sass:process -- --watch\" \"npm run cms:bundle -- --watch\" \"chokidar \\\"src/_includes/**\\\" -c \\\"npm run cms:precompile\\\"\" \"npm run serve\"",
     "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
-    "production": "npm run lint && npm run sass:process && npm run postcss && npm run cms:precompile && npm run cms:bundle && npm run svg && npx eleventy"
+    "production": "npm run lint && npm run sass:process && npm run postcss && npm run svg && npx eleventy"
   },
   "repository": {
     "type": "git",
