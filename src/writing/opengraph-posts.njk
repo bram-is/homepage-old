@@ -22,9 +22,18 @@ eleventyComputed:
 {% endset %}
 
 <main class="c-og">
-  {% include "partials/components/intro.njk" %}
+  <div class="c-og__wrap-intro  t-slate-bg">
+    {% include "partials/components/intro.njk" %}
+  </div>
   <footer class="o-grid  o-layer--small  t-dash-bg">
-    <div class="o-layout">
+    <div class="o-layout  o-layout--align-block-center  o-layout--gap-small">
+      <div class="c-og__avatar |  o-layout__fit">
+        <picture>
+          <source srcset="/images/avatar.webp" type="image/webp">
+          <source srcset="/images/avatar.jpg" type="image/jpeg">
+          <img class="c-avatar" src="/images/avatar.jpg" alt="Bram Smulders eating a steak" loading="lazy" width="320" height="320">
+        </picture>
+      </div>
       <div class="o-layout__fill">
         <p>{{ site.authorName }} - <a href="https://twitter.com/bramsmulders">{{ site.authorHandle }}</a></p>
       </div>

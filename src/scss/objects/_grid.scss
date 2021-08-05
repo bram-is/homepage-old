@@ -24,7 +24,6 @@
     [main-start] minmax(0, var(--main-size)) [main-end]
     minmax(0, 1fr) [retained-end]
     minmax(#{space.get('base')}, 2fr) [full-end];
-  grid-auto-flow: row;
 
   > * {
     grid-column: main;
