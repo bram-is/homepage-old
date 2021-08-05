@@ -15,6 +15,22 @@ const parseTransform = require("./src/transforms/parse-transform.js");
 const site = require("./src/_data/site.json");
 
 module.exports = function (config) {
+  config.addNunjucksShortcode("ogImageSource", function ({ url, inputPath }) {
+    let domain = "https://bram.is";
+
+    // special title og images, only for _posts
+    if (inputPath.startsWith("./src/writing/")) {
+      return `https://screenshot.bram.is/${encodeURIComponent(
+        `${domain}/opengraph${url}`
+      )}/opengraph/`;
+    }
+
+    // raw screenshot
+    return `https://screenshot.bram.is/${encodeURIComponent(
+      `${domain}${url}`
+    )}/opengraph/`;
+  });
+
   // Filters
   config.addFilter("dateFilter", dateFilter);
   config.addFilter("markdownFilter", markdownFilter);

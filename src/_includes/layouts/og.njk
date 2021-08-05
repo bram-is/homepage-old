@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+
+  <!-- Preload -->
+  <link rel="preload" href="/fonts/ubuntu-v14-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/crimson-text-v10-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/crimson-text-v10-latin-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/crimson-text-v10-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/svg/sprite.svg" as="image" type="image/svg+xml">
+
+  <style>{% include "assets/css/global.css" %}</style>
+
+  {% block head %}
+  {% endblock %}
+</head>
+<body>
+  {{ content | safe }}
+
+  {% block foot %}
+  {% endblock %}
+</body>
+</html>

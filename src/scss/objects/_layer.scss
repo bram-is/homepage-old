@@ -33,6 +33,11 @@
   }
 }
 
+.o-layer--small {
+  padding-block-start: space.get('base');
+  padding-block-end: space.get('base');
+}
+
 .o-layer--flow-root {
   display: flow-root;
 }

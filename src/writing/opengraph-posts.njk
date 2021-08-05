@@ -1,0 +1,33 @@
+---
+pagination:
+  data: "collections.posts"
+  size: 1
+  alias: "post"
+layout: layouts/og.njk
+permalink: "/opengraph{{ post.url }}"
+eleventyComputed:
+  sourceUrl: "https://bram.is{{ post.url }}"
+---
+
+{# Intro content #}
+{% set introHeading = post.data.title %}
+{% set introElement = "header" %}
+{% set introPrefix %}
+  {% if post.date %}
+    <time datetime="{{ post.date | w3DateFilter }}" itemprop="datePublished">{{ post.date | dateFilter }}</time>
+  {% endif %}
+{% endset %}
+{% set introSummary %}
+  <span>Takes about {{ helpers.getReadingTime(post.templateContent) }} minutes to read</span>
+{% endset %}
+
+<main class="c-og">
+  {% include "partials/components/intro.njk" %}
+  <footer class="o-grid  o-layer--small  t-dash-bg">
+    <div class="o-layout">
+      <div class="o-layout__fill">
+        <p>{{ site.authorName }} - <a href="https://twitter.com/bramsmulders">{{ site.authorHandle }}</a></p>
+      </div>
+    </div>
+  </footer>
+</main>
