@@ -11,6 +11,7 @@
 @use '../settings/vars';
 @use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
 @use '../../../../node_modules/@supple-kit/supple-css/tools/typography';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
 
 
 /*  Variables
@@ -34,6 +35,15 @@ html {
   @include responsive.mq(lap) {
     font-size: #{math.div(24px, 16px) * 1em};
   }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding-block-start: space.get('base');
+  padding-block-end: space.get('base');
 }
 
 h1 {
