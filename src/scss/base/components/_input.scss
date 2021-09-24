@@ -1,0 +1,36 @@
+/*  =========================================================================
+    components.input
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-input-text {
+  padding-block-start: calc(#{space.get('tiny')} - 1px);
+  padding-block-end: calc(#{space.get('tiny')} - 1px);
+  padding-inline-start: space.get('small');
+  padding-inline-end: space.get('small');
+  border: none;
+  border-bottom: 2px solid var(--color-input-border);
+  background-color: var(--color-input-bg);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.c-input-text--area {
+  inline-size: 100%;
+}
+
+::placeholder {
+  color: var(--color-input-placeholder);
+}

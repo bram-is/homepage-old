@@ -6,7 +6,7 @@
 /*  Settings
     ========================================================================= */
 
-@use 'settings/vars';
+@use 'base/settings/vars';
 
 
 
@@ -18,7 +18,7 @@
 /*  Generic
     ========================================================================= */
 
-@use 'generic/fonts';
+@use 'base/generic/fonts';
 @use '../../node_modules/@supple-kit/supple-css/generic/reset';
 
 
@@ -26,13 +26,13 @@
 /*  Elements
     ========================================================================= */
 
-@use 'elements/toplevel';
-@use 'elements/typography';
-@use 'elements/links';
-@use 'elements/hr';
-@use 'elements/label';
-@use 'elements/blockquote';
-@use 'elements/code';
+@use 'base/elements/toplevel';
+@use 'base/elements/typography';
+@use 'base/elements/links';
+@use 'base/elements/hr';
+@use 'base/elements/label';
+@use 'base/elements/blockquote';
+@use 'base/elements/code';
 
 
 
@@ -45,31 +45,31 @@
 @use '../../node_modules/@supple-kit/supple-css/objects/aspect-ratio';
 @use '../../node_modules/@supple-kit/supple-css/objects/flow';
 
-@use 'objects/grid';
-@use 'objects/layer';
-@use 'objects/content';
-@use 'objects/island';
+@use 'base/objects/grid';
+@use 'base/objects/layer';
+@use 'base/objects/content';
+@use 'base/objects/island';
 
 
 
 /*  Components
     ========================================================================= */
 
-@use 'components/button';
-@use 'components/skip-link';
-@use 'components/form';
-@use 'components/input';
-@use 'components/masthead';
-@use 'components/logo';
-@use 'components/nav';
-@use 'components/hero';
-@use 'components/intro';
-@use 'components/tags';
-@use 'components/heading';
-@use 'components/trusted';
-@use 'components/recent';
-@use 'components/og';
-@use 'components/avatar';
+@use 'base/components/button';
+@use 'base/components/skip-link';
+@use 'base/components/form';
+@use 'base/components/input';
+@use 'base/components/masthead';
+@use 'base/components/logo';
+@use 'base/components/nav';
+@use 'base/components/hero';
+@use 'base/components/intro';
+@use 'base/components/tags';
+@use 'base/components/heading';
+@use 'base/components/trusted';
+@use 'base/components/recent';
+@use 'base/components/og';
+@use 'base/components/avatar';
 
 
 
@@ -86,4 +86,4 @@
 @use '../../node_modules/@supple-kit/supple-css/utilities/spacing';
 @use '../../node_modules/@supple-kit/supple-css/utilities/visually-hidden';
 
-@use 'utilities/font-size';
+@use 'base/utilities/font-size';

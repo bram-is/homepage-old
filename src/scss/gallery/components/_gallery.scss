@@ -1,0 +1,33 @@
+/*  =========================================================================
+    gallery.components.gallery
+/   ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+/   ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/rem';
+
+
+
+/*  Variables
+/   ========================================================================= */
+
+
+
+/*  Functions/Mixins
+/   ========================================================================= */
+
+
+
+/*  Module
+/   ========================================================================= */
+
+.c-gallery {
+  --min-inline-size: #{rem.convert(150px)};
+}
+
+.c-gallery__thumb {
+  object-fit: cover;
+}

@@ -1,0 +1,47 @@
+/*  =========================================================================
+    components.hero
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/rem';
+@use '../../../../node_modules/@supple-kit/supple-css/settings/defaults';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-hero {
+  --layout-block-gap: 0;
+  text-align: center;
+
+  @include responsive.mq(palm) {
+    text-align: start;
+    min-height: calc(60vh - #{rem.convert(15 * defaults.$baseline)});
+  }
+}
+
+.c-hero__title {
+  text-transform: uppercase;
+}
+
+.c-hero__hi {
+  display: block;
+  text-transform: none;
+}
+
+.c-hero__wrap-image {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  inline-size: rem.convert(defaults.$baseline * 14);
+}
+
+.c-hero__image {
+  object-fit: cover;
+}

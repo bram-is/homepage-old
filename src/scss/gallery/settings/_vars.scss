@@ -1,0 +1,14 @@
+/*  =========================================================================
+    gallery.settings.vars
+/   ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/settings/defaults' with (
+  $font-size: 20px
+);
+
+$family-body: 'Lato', sans-serif !default;
+$family-handwritten: 'MonteCarlo', cursive !default;
+$family-handwritten-big: 'Nothing You Could Do', cursive !default;
+
+$color-brand-primary: #4b8488 !default;
+$color-white: #ffffff !default;

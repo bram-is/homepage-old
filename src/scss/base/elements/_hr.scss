@@ -1,0 +1,25 @@
+/*  =========================================================================
+    elements.hr
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+@use '../../../../node_modules/@supple-kit/supple-css/settings/defaults';
+@use '../settings/vars';
+
+
+
+/*  Module
+    ========================================================================= */
+
+hr {
+  color: currentColor;
+  border: none;
+  border-block-end-width: 1px;
+  border-block-end-style: solid;
+  margin-block-end: calc(#{space.get('base')} - 1px);
+}

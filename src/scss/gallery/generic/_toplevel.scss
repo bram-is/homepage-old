@@ -1,0 +1,42 @@
+/*  =========================================================================
+    gallery.generic.toplevel
+/   ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+/   ========================================================================= */
+
+@use 'sass:math';
+@use '../settings/vars';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/typography';
+
+
+/*  Variables
+/   ========================================================================= */
+
+
+
+/*  Functions/Mixins
+/   ========================================================================= */
+
+
+
+/*  Module
+/   ========================================================================= */
+
+html {
+  background-color: vars.$color-brand-primary;
+  font-family: vars.$family-body;
+  color: vars.$color-white;
+
+  @include responsive.mq(lap) {
+    font-size: #{math.div(24px, 16px) * 1em};
+  }
+}
+
+h1 {
+  font-family: vars.$family-handwritten-big;
+  @include typography.font-size(60px);
+}

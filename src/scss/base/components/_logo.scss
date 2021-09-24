@@ -1,0 +1,39 @@
+/*  =========================================================================
+    components.logo
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/typography';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
+@use '../settings/vars';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-logo {
+  position: relative;
+  display: inline-block;
+  padding-block-start: space.get('tiny');
+  padding-block-end: space.get('tiny');
+  @include typography.font-size(vars.$font-size-epsilon);
+  color: var(--color-brand-primary);
+  font-family: vars.$family-leader;
+  font-weight: 800;
+  white-space: nowrap;
+
+  @include responsive.mq(lap) {
+    @include typography.font-size(vars.$font-size-delta);
+  }
+}
+
+.c-logo__domain,
+.c-logo__part {
+  text-decoration: none;
+}

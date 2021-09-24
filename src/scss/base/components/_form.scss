@@ -1,0 +1,25 @@
+/*  =========================================================================
+    components.form
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-form {
+  //
+}
+
+.c-form__list-item {
+  &:not(:last-child) {
+    margin-block-end: space.get('base');
+  }
+}

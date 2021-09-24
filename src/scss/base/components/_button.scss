@@ -1,0 +1,51 @@
+/*  =========================================================================
+    components.button
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+@use '../settings/vars';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-button {
+  display: inline-block;
+  padding-block-start: space.get('tiny');
+  padding-block-end: space.get('tiny');
+  padding-inline-start: space.get('small');
+  padding-inline-end: space.get('small');
+  background-color: var(--color-action-bg);
+  color: var(--color-action-text);
+  font-family: #{vars.$family-leader};
+  text-decoration: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  &:focus,
+  &:hover {
+    color: var(--color-action-text-active);
+    background-color: var(--color-action-bg-active);
+  }
+}
+
+
+/**
+ * modifier: inline
+ */
+.c-button--inline {
+  font-family: #{vars.$family-body};
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: space.get('tiny');
+  padding-inline-end: space.get('tiny');
+}
+
+

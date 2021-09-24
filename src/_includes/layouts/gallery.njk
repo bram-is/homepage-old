@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml" />
+  <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
+  <link rel="manifest" href="/images/meta/manifest.json">
+  <link rel="apple-touch-icon" href="/images/meta/icon-192x192.png">
+  <meta name="theme-color" content="#4B8488"/>
+
+  {% include "partials/global/meta-info.njk" %}
+
+  <!-- Preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=MonteCarlo&family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+
+  <style>{% include "assets/css/gallery.css" %}</style>
+
+  {% block head %}
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+
+
+    <div class="o-flow">
+      <section class="o-retain  o-retain--desk">
+        <div class="c-masthead  |  o-flow">
+          <h1>Better<br>Together</h1>
+          <div>
+            <p>Saskia & Bram</p>
+            <time datetime="1633100400">01.10.2021</time>
+            <br>
+            <br>
+            <br>
+            <p>Stay tuned! De foto's en video's staan binnenkort online.</p>
+          </div>
+        </masthead>
+      </section>
+{#
+      <section class="o-retain  o-retain--desk">
+        <div class="c-player  |  o-aspect-ratio">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <section class="o-retain  o-retain--desk">
+        <ul class="c-gallery  |  o-mesh  o-mesh--flow  o-mesh--gap-base">
+          <li class="c-gallery__item">
+            <a href="https://picsum.photos/1600/900" class="o-aspect-ratio">
+              <img class="c-gallery__thumb" src="https://picsum.photos/1600/900"/>
+            </a>
+          </li>
+          <li class="c-gallery__item">
+            <a href="https://picsum.photos/1600/900" class="o-aspect-ratio">
+              <img class="c-gallery__thumb" src="https://picsum.photos/1600/900"/>
+            </a>
+          </li>
+          <li class="c-gallery__item">
+            <a href="https://picsum.photos/1600/900" class="o-aspect-ratio">
+              <img class="c-gallery__thumb" src="https://picsum.photos/1600/900"/>
+            </a>
+          </li>
+          <li class="c-gallery__item">
+            <a href="https://picsum.photos/1600/900" class="o-aspect-ratio">
+              <img class="c-gallery__thumb" src="https://picsum.photos/1600/900"/>
+            </a>
+          </li>
+          <li class="c-gallery__item">
+            <a href="https://picsum.photos/1600/900" class="o-aspect-ratio">
+              <img class="c-gallery__thumb" src="https://picsum.photos/1600/900"/>
+            </a>
+          </li>
+        </ul>
+      </section> #}
+    </div>
+
+
+
+
+
+  {% endblock content %}
+
+  {% block foot %}
+  {% endblock %}
+
+</body>
+</html>

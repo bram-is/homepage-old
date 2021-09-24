@@ -1,0 +1,39 @@
+/*  =========================================================================
+    components.trusted
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-trusted {
+  //
+}
+
+.c-trusted__list {
+  --layout-block-gap: #{space.get('base')};
+}
+
+.c-trusted__wrap-logo {
+  display: block;
+  block-size: space.get('base');
+  opacity: 0.7;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.c-trusted__wrap-logo svg {
+  block-size: 100%;
+  inline-size: auto;
+}

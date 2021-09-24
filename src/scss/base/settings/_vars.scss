@@ -1,0 +1,89 @@
+/*  =========================================================================
+    settings.vars
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/settings/defaults' with (
+  $font-size: 20px,
+  $space-factors: (
+    'none': 0,
+    'tiny': 1,
+    'small': 2,
+    'base': 4,
+    'large': 8,
+    'huge': 16
+  ),
+  $breakpoints: (
+    palm: 480px,
+    lap: 640px,
+    desk: 960px,
+    wall: 1280px,
+  ),
+);
+
+@use '../../../../node_modules/@supple-kit/supple-css/objects/layout/variables' as layout-variables with (
+  $gaps: (
+    'base',
+    'large',
+    'small',
+    'tiny',
+  ),
+  $fill-in-query: (palm, lap),
+  $fit-in-query: (palm, lap),
+);
+
+@use '../../../../node_modules/@supple-kit/supple-css/objects/flow/variables' as flow-variables with (
+  $gaps: (
+    'tiny',
+    'small',
+    'base'
+  )
+);
+
+@use '../../../../node_modules/@supple-kit/supple-css/utilities/spacing/variables' as spacing-variables with (
+  $in-query: (palm, lap),
+  $sizes: (
+    'none',
+    'small',
+    'base'
+  )
+);
+
+
+
+/*  Custom
+    ========================================================================= */
+
+/**
+ * Typography
+ */
+$family-body: 'Crimson Text', serif !default;
+$family-leader: 'Ubuntu', sans-serif !default;
+
+$font-size-min: defaults.$font-size !default;
+$font-size-max: 28px !default;
+
+$font-size-alpha: 40px !default;
+$font-size-beta: 32px !default;
+$font-size-gamma: 24px !default;
+$font-size-delta: 24px !default;
+$font-size-epsilon: 24px !default;
+$font-size-zeta: 24px !default;
+$font-size-eta: 16px !default;
+
+
+/**
+ * Colors
+ * https://coolors.co/fcfcfc-12355b-ee4266-161f2b-3ddc97
+ */
+$color-light: #fcfcfc !default; // Baby powder
+$color-gray: #ececec !default;
+$color-dark-gray: #7d99b4 !default;
+$color-dark: #12355b !default; // Prussian blue
+$color-brand-primary: #ee4266 !default; // Paradise pink
+$color-brand-secondary: #161f2b !default; // Rich black
+$color-brand-tertiary: #3ddc97 !default; // Medium aquamarine

@@ -1,0 +1,33 @@
+/*  =========================================================================
+    gallery.components.masthead
+/   ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+/   ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/settings/defaults';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/typography';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/space';
+
+
+
+/*  Variables
+/   ========================================================================= */
+
+
+
+/*  Functions/Mixins
+/   ========================================================================= */
+
+
+
+/*  Module
+/   ========================================================================= */
+
+.c-masthead {
+  padding-block-start: space.get('base');
+  text-align: center;
+  @include typography.font-size(20px);
+}

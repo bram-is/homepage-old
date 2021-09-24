@@ -1,0 +1,58 @@
+/*  =========================================================================
+    elements.toplevel
+    html and body elements
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use 'sass:map';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/_internal/functions';
+@use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
+@use '../../../../node_modules/@supple-kit/supple-css/settings/defaults';
+@use '../settings/vars';
+
+
+
+/*  Variables
+    ========================================================================= */
+
+$min-bp-name: lap;
+$min-bp: map.get(defaults.$breakpoints, $min-bp-name);
+$min-bp-clean: functions.strip-units($min-bp);
+$min-bp-em: #{($min-bp/16px) * 1em};
+$min-bp-em-clean: #{($min-bp-clean/16)};
+
+$max-bp-name: wall;
+$max-bp: map.get(defaults.$breakpoints, $max-bp-name);
+$max-bp-clean: functions.strip-units($max-bp);
+$max-bp-em-clean: #{($max-bp-clean/16)};
+
+$font-size-em: #{(defaults.$font-size/16px) * 1em};
+$font-size-clean: functions.strip-units(defaults.$font-size);
+
+$font-size-max: vars.$font-size-max;
+$font-size-max-clean: functions.strip-units($font-size-max);
+$font-size-max-em: #{($font-size-max/16px) * 1em};
+$font-size-max-em-clean: #{($font-size-max-clean/16)};
+
+
+
+/*  Module
+    ========================================================================= */
+
+html {
+  font-family: #{vars.$family-body};
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  @include responsive.mq($min-bp-name) {
+    font-size: calc(#{$font-size-em} + (#{$font-size-max-em-clean} - #{$font-size-clean / 16}) * (100vw - #{$min-bp-em}) / (#{$max-bp-em-clean} - #{$min-bp-em-clean}));
+  }
+
+  @include responsive.mq($max-bp-name) {
+    font-size: $font-size-max-em;
+  }
+}

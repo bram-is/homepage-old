@@ -1,0 +1,25 @@
+/*  =========================================================================
+    components.skip-link
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/a11y';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-skip-link {
+  &:not(:focus) {
+    @include a11y.visually-hidden();
+  }
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+}

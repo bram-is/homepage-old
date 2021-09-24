@@ -1,0 +1,28 @@
+/*  =========================================================================
+    components.recent
+    ========================================================================= */
+
+/*  Use/Forward rules
+    `@use` or `@forward` everything you need here from other files.
+    These can include variables, mixins & other includes.
+    ========================================================================= */
+
+@use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
+
+
+
+/*  Module
+    ========================================================================= */
+
+.c-recent {
+  --columns: 2;
+  grid-column: retained;
+}
+
+.c-recent__item {
+  --colspan: 2;
+
+  @include responsive.mq(lap) {
+    --colspan: 1;
+  }
+}

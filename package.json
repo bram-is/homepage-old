@@ -58,7 +58,7 @@
     "gzip": "gzip-size src/_includes/assets/css/global.css",
     "svg": "svgstore -o src/_includes/assets/svg/sprite.svg src/_includes/icons/**/*.svg",
     "test": "npm run lint && npm run gzip",
-    "start": "npm run svg && concurrently \"npm run sass:process -- --watch\" \"npm run cms:bundle -- --watch\" \"chokidar \\\"src/_includes/**\\\" -c \\\"npm run cms:precompile\\\"\" \"npm run serve\"",
+    "start": "npm run svg && concurrently \"npm run sass:process -- --watch\" \"npm run cms:bundle -- --watch\" \"npm run serve\"",
     "serve": "cross-env ELEVENTY_ENV=development npx eleventy --serve",
     "production": "npm run lint && npm run sass:process && npm run postcss && npm run svg && npx eleventy"
   },
