@@ -18,6 +18,25 @@ const site = require("./src/_data/site.json");
 // Import Gallery files
 const galleryMarriedImages = fg.sync(["**/married/images/*", "!**/dist"]);
 
+const Image = require("@11ty/eleventy-img");
+
+async function thumbShortcode(src, alt, className = "") {
+  if (alt === undefined) {
+    // You bet we throw an error on missing alt (alt="" works okay)
+    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+  }
+
+  let metadata = await Image(src, {
+    widths: [464],
+    formats: ["jpeg"],
+    urlPath: "/images/generated/",
+    outputDir: "./src/images/generated/",
+  });
+
+  let data = metadata.jpeg[metadata.jpeg.length - 1];
+  return `<img class="${className}" src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+}
+
 module.exports = function (config) {
   const cachebuster = Math.round(new Date().getTime() / 1000);
 
@@ -36,6 +55,8 @@ module.exports = function (config) {
       `${domain}${url}`
     )}/opengraph/_${cachebuster}`;
   });
+
+  config.addNunjucksAsyncShortcode("thumb", thumbShortcode);
 
   // Filters
   config.addFilter("dateFilter", dateFilter);
@@ -78,9 +99,7 @@ module.exports = function (config) {
   });
 
   //Create collection of gallery images
-  config.addCollection("marriedGallery", (collection) =>
-    galleryMarriedImages.map((image) => image.replace("src", ""))
-  );
+  config.addCollection("marriedGallery", (collection) => galleryMarriedImages);
 
   // Plugins
   config.addPlugin(rssPlugin);

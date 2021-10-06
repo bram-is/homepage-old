@@ -26,7 +26,7 @@ module.exports = function (value, outputPath) {
 
         // Replace parent p wrapping with the image itself so we can place em in the grid
         const parent = image.closest("p");
-        if (parent.nodeName === "P") {
+        if (parent && parent.nodeName === "P") {
           parent.replaceWith(image);
         }
 

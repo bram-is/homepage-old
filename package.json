@@ -28,6 +28,7 @@
     "slugify": "^1.6.0"
   },
   "devDependencies": {
+    "@11ty/eleventy-img": "^0.10.0",
     "@erquhart/rollup-plugin-node-builtins": "^2.1.5",
     "@netlify/plugin-lighthouse": "^2.1.2",
     "autoprefixer": "^10.3.5",

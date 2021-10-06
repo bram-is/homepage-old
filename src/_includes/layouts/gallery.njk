@@ -43,12 +43,12 @@
         </div>
       </section>
 
-      <section class="o-retain  o-retain--desk">
+      <section class="o-retain  o-retain--desk  o-content">
         <ul class="c-gallery  |  o-mesh  o-mesh--flow  o-mesh--gap-base">
           {% for image in collections[galleryKey] %}
           <li class="c-gallery__item">
             <a href="{{image}}" class="o-aspect-ratio" target="_blank" rel="noopener">
-              <img class="c-gallery__thumb" src="{{image}}" alt="{{image}}" loading="lazy" />
+              {% thumb image, "", "c-gallery__thumb" %}
             </a>
           </li>
           {% endfor %}
