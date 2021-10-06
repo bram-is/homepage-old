@@ -7,13 +7,15 @@
     <div>
       <ol class="o-list-clean  |  o-flow  o-flow--small" reversed>
         {% for item in postListItems %}
-          {% if item.date.getTime() <= global.now %}
-            <li>
-              <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-              <h3>
-                <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
-              </h3>
-            </li>
+          {% if item.date %}
+            {% if item.date.getTime() <= global.now %}
+              <li>
+                <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+                <h3>
+                  <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
+                </h3>
+              </li>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </ol>

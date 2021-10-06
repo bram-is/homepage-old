@@ -6,6 +6,10 @@
   $font-size: 20px
 );
 
+@use '../../../../node_modules/@supple-kit/supple-css/objects/flow' with (
+  $gaps: ('large')
+);
+
 $family-body: 'Lato', sans-serif !default;
 $family-handwritten: 'MonteCarlo', cursive !default;
 $family-handwritten-big: 'Nothing You Could Do', cursive !default;

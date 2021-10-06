@@ -1,6 +1,7 @@
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const fs = require("fs");
+const fg = require("fast-glob");
 
 // Import filters
 const dateFilter = require("./src/filters/date-filter.js");
@@ -13,6 +14,9 @@ const parseTransform = require("./src/transforms/parse-transform.js");
 
 // Import data files
 const site = require("./src/_data/site.json");
+
+// Import Gallery files
+const galleryMarriedImages = fg.sync(["**/married/images/*", "!**/dist"]);
 
 module.exports = function (config) {
   const cachebuster = Math.round(new Date().getTime() / 1000);
@@ -72,6 +76,13 @@ module.exports = function (config) {
       .reverse()
       .slice(0, site.maxPostsPerPage);
   });
+
+  console.log("galleryMarriedImages", galleryMarriedImages);
+
+  //Create collection of gallery images
+  config.addCollection("marriedGallery", (collection) =>
+    galleryMarriedImages.map((image) => image.replace("src", ""))
+  );
 
   // Plugins
   config.addPlugin(rssPlugin);
