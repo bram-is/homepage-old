@@ -77,8 +77,6 @@ module.exports = function (config) {
       .slice(0, site.maxPostsPerPage);
   });
 
-  console.log("galleryMarriedImages", galleryMarriedImages);
-
   //Create collection of gallery images
   config.addCollection("marriedGallery", (collection) =>
     galleryMarriedImages.map((image) => image.replace("src", ""))
