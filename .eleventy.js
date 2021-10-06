@@ -21,20 +21,22 @@ const galleryMarriedImages = fg.sync(["**/married/images/*", "!**/dist"]);
 const Image = require("@11ty/eleventy-img");
 
 async function thumbShortcode(src, alt, className = "") {
-  if (alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-  }
-
   let metadata = await Image(src, {
     widths: [464],
-    formats: ["jpeg"],
+    formats: ["avif", "jpeg"],
     urlPath: "/images/generated/",
-    outputDir: "./src/images/generated/",
+    outputDir: "./dist/images/generated/",
   });
 
-  let data = metadata.jpeg[metadata.jpeg.length - 1];
-  return `<img class="${className}" src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+  let imageAttributes = {
+    alt,
+    class: className,
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  return Image.generateHTML(metadata, imageAttributes);
 }
 
 module.exports = function (config) {
@@ -99,7 +101,12 @@ module.exports = function (config) {
   });
 
   //Create collection of gallery images
-  config.addCollection("marriedGallery", (collection) => galleryMarriedImages);
+  config.addCollection("marriedGallery", (collection) =>
+    galleryMarriedImages.map((image) => ({
+      full: image,
+      relative: image.replace("src", ""),
+    }))
+  );
 
   // Plugins
   config.addPlugin(rssPlugin);
