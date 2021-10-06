@@ -25,7 +25,7 @@ async function thumbShortcode(src, alt, className = "") {
     widths: [464],
     formats: ["avif", "jpeg"],
     urlPath: "/images/generated/",
-    outputDir: "./dist/images/generated/",
+    outputDir: "./src/images/generated/",
   });
 
   let imageAttributes = {
