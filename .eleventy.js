@@ -20,24 +20,25 @@ const galleryMarriedImages = fg.sync(["**/married/images/*", "!**/dist"]);
 
 const Image = require("@11ty/eleventy-img");
 
-async function thumbShortcode(src, alt, className = "") {
-  let metadata = await Image(src, {
+function thumbTwoShortcode(src, alt, className = "") {
+  let options = {
     widths: [464],
     formats: ["avif", "jpeg"],
     urlPath: "/media/generated/",
     outputDir: "./src/media/generated/",
-  });
+  };
 
-  // console.log("metadata", metadata);
+  // generate images, while this is async we don’t wait
+  Image(src, options);
 
   let imageAttributes = {
-    alt,
     class: className,
+    alt,
     loading: "lazy",
     decoding: "async",
   };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+  // get metadata even the images are not fully generated
+  metadata = Image.statsSync(src, options);
   return Image.generateHTML(metadata, imageAttributes);
 }
 
@@ -60,7 +61,7 @@ module.exports = function (config) {
     )}/opengraph/_${cachebuster}`;
   });
 
-  config.addNunjucksAsyncShortcode("thumb", thumbShortcode);
+  config.addNunjucksShortcode("thumb", thumbTwoShortcode);
 
   // Filters
   config.addFilter("dateFilter", dateFilter);
@@ -103,7 +104,6 @@ module.exports = function (config) {
       .slice(0, site.maxPostsPerPage);
   });
 
-  console.log("galleryMarriedImages", galleryMarriedImages);
   //Create collection of gallery images
   config.addCollection("marriedGallery", (collection) =>
     galleryMarriedImages.map((image) => ({
