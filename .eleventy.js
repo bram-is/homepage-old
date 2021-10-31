@@ -106,6 +106,7 @@ module.exports = function (config) {
   });
 
   //Create collection of gallery images
+  console.log("galleryMarriedImages", galleryMarriedImages);
   config.addCollection("marriedGallery", (collection) =>
     galleryMarriedImages.map((image) => ({
       full: image.replace("src", "./src"),
