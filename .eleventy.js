@@ -20,9 +20,9 @@ const galleryMarriedImages = fg.sync(["**/married/images/*", "!**/dist"]);
 
 const Image = require("@11ty/eleventy-img");
 
-function thumbTwoShortcode(src, alt, className = "") {
+function imagesShortcode(src, alt, widths, className = "") {
   let options = {
-    widths: [464],
+    widths,
     formats: ["avif", "jpeg"],
     urlPath: "/media/generated/",
     outputDir: "./src/media/generated/",
@@ -61,7 +61,7 @@ module.exports = function (config) {
     )}/opengraph/_${cachebuster}`;
   });
 
-  config.addNunjucksShortcode("thumb", thumbTwoShortcode);
+  config.addNunjucksShortcode("image", imagesShortcode);
 
   // Filters
   config.addFilter("dateFilter", dateFilter);
@@ -79,6 +79,7 @@ module.exports = function (config) {
   config.addPassthroughCopy("src/fonts");
   config.addPassthroughCopy("src/images");
   config.addPassthroughCopy("src/media/generated");
+  config.addPassthroughCopy("src/media/married");
   config.addPassthroughCopy("src/js");
   config.addPassthroughCopy("src/admin/config.yml");
   config.addPassthroughCopy("src/admin/previews.js");
