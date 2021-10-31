@@ -48,8 +48,8 @@
           {% for image in collections[galleryKey] %}
           <li class="c-gallery__item">
             <a href="{{image.relative}}" class="o-aspect-ratio" target="_blank" rel="noopener">
-              {# {% thumb image.full, "", "c-gallery__thumb" %} #}
-              <img class="c-gallery__thumb" src="{{image.relative}}" alt="" />
+              {% thumb image.full, "", "c-gallery__thumb" %}
+              {# <img class="c-gallery__thumb" src="{{image.relative}}" alt="" /> #}
             </a>
           </li>
           {% endfor %}
