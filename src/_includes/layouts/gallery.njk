@@ -37,11 +37,11 @@
         </masthead>
       </section>
 
-      <section class="o-retain  o-retain--desk">
+      {# <section class="o-retain  o-retain--desk">
         <div class="c-player  |  o-aspect-ratio">
           <video src="{{videoUrl}}" controls poster="/images/married/images/IMG_5976.jpg" />
         </div>
-      </section>
+      </section> #}
 
       <section class="o-retain  o-retain--desk  o-content">
         <ul class="c-gallery  |  o-mesh  o-mesh--flow  o-mesh--gap-base">
@@ -49,7 +49,6 @@
           <li class="c-gallery__item">
             <a href="{{image.relative}}" class="o-aspect-ratio" target="_blank" rel="noopener">
               {% thumb image.full, "", "c-gallery__thumb" %}
-              {# <img class="c-gallery__thumb" src="{{image.relative}}" alt="" /> #}
             </a>
           </li>
           {% endfor %}

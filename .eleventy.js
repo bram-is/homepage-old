@@ -24,9 +24,11 @@ async function thumbShortcode(src, alt, className = "") {
   let metadata = await Image(src, {
     widths: [464],
     formats: ["avif", "jpeg"],
-    urlPath: "/images/generated/",
-    outputDir: "./src/images/generated/",
+    urlPath: "/media/generated/",
+    outputDir: "./src/media/generated/",
   });
+
+  // console.log("metadata", metadata);
 
   let imageAttributes = {
     alt,
@@ -75,6 +77,7 @@ module.exports = function (config) {
   // Passthrough copy
   config.addPassthroughCopy("src/fonts");
   config.addPassthroughCopy("src/images");
+  config.addPassthroughCopy("src/media/generated");
   config.addPassthroughCopy("src/js");
   config.addPassthroughCopy("src/admin/config.yml");
   config.addPassthroughCopy("src/admin/previews.js");
@@ -100,10 +103,11 @@ module.exports = function (config) {
       .slice(0, site.maxPostsPerPage);
   });
 
+  console.log("galleryMarriedImages", galleryMarriedImages);
   //Create collection of gallery images
   config.addCollection("marriedGallery", (collection) =>
     galleryMarriedImages.map((image) => ({
-      full: image,
+      full: image.replace("src", "./src"),
       relative: image.replace("src", ""),
     }))
   );

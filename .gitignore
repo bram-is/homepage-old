@@ -16,4 +16,4 @@ src/scss/_tokens.scss
 # Hide compiled CSS
 src/_includes/assets/css/*
 src/_includes/assets/svg/sprite.svg
-src/images/generated
+src/media/generated
