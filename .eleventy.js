@@ -15,9 +15,6 @@ const parseTransform = require("./src/transforms/parse-transform.js");
 // Import data files
 const site = require("./src/_data/site.json");
 
-// Import Gallery files
-const galleryMarriedImages = fg.sync(["**/married/images/*", "!**/dist"]);
-
 const Image = require("@11ty/eleventy-img");
 
 function imagesShortcode(src, alt, widths, className = "") {
@@ -104,15 +101,6 @@ module.exports = function (config) {
       .reverse()
       .slice(0, site.maxPostsPerPage);
   });
-
-  //Create collection of gallery images
-  console.log("galleryMarriedImages", galleryMarriedImages);
-  config.addCollection("marriedGallery", (collection) =>
-    galleryMarriedImages.map((image) => ({
-      full: image.replace("src", "./src"),
-      relative: image.replace("src", ""),
-    }))
-  );
 
   // Plugins
   config.addPlugin(rssPlugin);
