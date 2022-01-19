@@ -9,6 +9,7 @@
     ========================================================================= */
 
 @use 'sass:map';
+@use 'sass:math';
 @use '../../../../node_modules/@supple-kit/supple-css/tools/_internal/functions';
 @use '../../../../node_modules/@supple-kit/supple-css/tools/responsive';
 @use '../../../../node_modules/@supple-kit/supple-css/settings/defaults';
@@ -22,20 +23,20 @@
 $min-bp-name: lap;
 $min-bp: map.get(defaults.$breakpoints, $min-bp-name);
 $min-bp-clean: functions.strip-units($min-bp);
-$min-bp-em: #{($min-bp/16px) * 1em};
-$min-bp-em-clean: #{($min-bp-clean/16)};
+$min-bp-em: #{math.div($min-bp, 16px) * 1em};
+$min-bp-em-clean: #{math.div(($min-bp-clean, 16)};
 
 $max-bp-name: wall;
 $max-bp: map.get(defaults.$breakpoints, $max-bp-name);
 $max-bp-clean: functions.strip-units($max-bp);
-$max-bp-em-clean: #{($max-bp-clean/16)};
+$max-bp-em-clean: #{math.div($max-bp-clean, 16)};
 
-$font-size-em: #{(defaults.$font-size/16px) * 1em};
+$font-size-em: #{math.div(defaults.$font-size, 16px) * 1em};
 $font-size-clean: functions.strip-units(defaults.$font-size);
 
 $font-size-max: vars.$font-size-max;
 $font-size-max-clean: functions.strip-units($font-size-max);
-$font-size-max-em: #{($font-size-max/16px) * 1em};
+$font-size-max-em: #{math.div($font-size-max, 16px) * 1em};
 $font-size-max-em-clean: #{($font-size-max-clean/16)};
 
 
