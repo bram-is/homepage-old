@@ -31,6 +31,7 @@
     "@11ty/eleventy-img": "^1.0.0",
     "@erquhart/rollup-plugin-node-builtins": "^2.1.5",
     "@netlify/plugin-lighthouse": "^2.1.2",
+    "@supple-kit/stylelint-config-supple": "^4.0.1",
     "autoprefixer": "^10.4.2",
     "bl": "^5.0.0",
     "chokidar-cli": "^3.0.0",
@@ -46,8 +47,7 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "stylelint": "^14.2.0",
-    "stylelint-config-supple": "^3.0.3",
-    "stylelint-scss": "^4.1.0",
+    "stylelint-config-standard-scss": "^3.0.0",
     "svgstore-cli": "^2.0.1"
   },
   "scripts": {

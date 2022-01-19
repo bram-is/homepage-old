@@ -20,20 +20,24 @@
 /*  Variables
     ========================================================================= */
 
+// min
 $min-bp-name: lap;
 $min-bp: map.get(defaults.$breakpoints, $min-bp-name);
 $min-bp-clean: functions.strip-units($min-bp);
 $min-bp-em: #{math.div($min-bp, 16px) * 1em};
 $min-bp-em-clean: #{math.div($min-bp-clean, 16)};
 
+// max
 $max-bp-name: wall;
 $max-bp: map.get(defaults.$breakpoints, $max-bp-name);
 $max-bp-clean: functions.strip-units($max-bp);
 $max-bp-em-clean: #{math.div($max-bp-clean, 16)};
 
+// font-size min
 $font-size-em: #{math.div(defaults.$font-size, 16px) * 1em};
 $font-size-clean: functions.strip-units(defaults.$font-size);
 
+// font-size max
 $font-size-max: vars.$font-size-max;
 $font-size-max-clean: functions.strip-units($font-size-max);
 $font-size-max-em: #{math.div($font-size-max, 16px) * 1em};
@@ -50,7 +54,7 @@ html {
   color: var(--color-text);
 
   @include responsive.mq($min-bp-name) {
-    font-size: calc(#{$font-size-em} + (#{$font-size-max-em-clean} - #{math.div($font-size-clean, 16)}) * (100vw - #{$min-bp-em}) / (#{$max-bp-em-clean} - #{$min-bp-em-clean}));
+    font-size: calc(#{$font-size-em} + (#{$font-size-max-em-clean} - #{math.div($font-size-clean, 16)}) * (100vw - #{$min-bp-em}) / (#{$max-bp-em-clean} - #{$min-bp-em-clean})); // stylelint-disable-line max-line-length
   }
 
   @include responsive.mq($max-bp-name) {

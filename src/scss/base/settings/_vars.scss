@@ -64,9 +64,11 @@
 $family-body: 'Crimson Text', serif !default;
 $family-leader: 'Ubuntu', sans-serif !default;
 
+// font-size default
 $font-size-min: defaults.$font-size !default;
 $font-size-max: 28px !default;
 
+// font-size sizes
 $font-size-alpha: 40px !default;
 $font-size-beta: 32px !default;
 $font-size-gamma: 24px !default;

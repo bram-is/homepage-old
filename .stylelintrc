@@ -1,6 +1,4 @@
 {
-  "extends": "stylelint-config-supple",
-  "ignoreFiles": [
-    "test/css/*"
-  ]
+  "extends": "@supple-kit/stylelint-config-supple",
+  "ignoreFiles": ["test/css/*", "src/scss/_tokens.scss"]
 }

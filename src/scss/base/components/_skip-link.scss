@@ -16,7 +16,7 @@
 
 .c-skip-link {
   &:not(:focus) {
-    @include a11y.visually-hidden();
+    @include a11y.visually-hidden;
   }
   position: relative;
   width: 100%;

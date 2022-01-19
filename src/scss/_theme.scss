@@ -43,7 +43,7 @@
   --color-brand-tertiary: #{vars.$color-brand-tertiary};
   --color-code-bg: #{vars.$color-gray};
 
-  @include tools.dark-mode() {
+  @include tools.dark-mode {
     --color-bg: #{vars.$color-dark};
     --color-text: #{vars.$color-light};
     --color-stroke: #{vars.$color-light};
