@@ -83,6 +83,11 @@
   force = true
 
 [[redirects]]
+  from = "/married-to-saskia"
+  to = "https://www.icloud.com/sharedalbum/nl-nl/#B0j5n8hH4GvdZr2"
+  force = true
+
+[[redirects]]
   from = "/blog/how-i-improved-my-workflow-with-smacss-sass"
   to = "/writing/how-i-improved-my-workflow-with-smacss-sass"
   status = 301
