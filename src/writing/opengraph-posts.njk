@@ -25,9 +25,9 @@ eleventyComputed:
     <time datetime="{{ post.date | w3DateFilter }}" itemprop="datePublished">{{ post.date | dateFilter }}</time>
   {% endif %}
 {% endset %}
-{% set introSummary %}
-  <span>Takes about {{ helpers.getReadingTime(post.templateContent) }} minutes to read</span>
-{% endset %}
+{# {% set introSummary %}
+  <span>Takes about {{ helpers.getReadingTime(post.templateContent) }} minute(s) to read</span>
+{% endset %} #}
 
 <main class="c-og">
   <div class="c-og__wrap-intro  t-slate-bg">
