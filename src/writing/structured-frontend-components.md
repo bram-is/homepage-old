@@ -3,16 +3,18 @@ title: Structured Front-end components
 metaDesc: A new look on implementing front-end components with atomic design
 date: 2017-02-27
 tags:
+  - Atomic Design
+  - CSS
+  - Sass
+  - SCSS
   - workflow
-  - atomic-design
-  - css
   - components
-  - sass
 part: writing
 ---
+
 ![Bram Smulders speaking about Atomic Design fot Fronteers at E-sites](/images/talk-fronteers-e-sites.jpg)
 
-*This article is an in depth follow up on the [talk](https://bramsmulders.github.io/slides/atomic-design-met-pattern-lab.html#/) I gave at the [Fronteers meetup at e-sites](https://fronteers.nl/bijeenkomsten/2017/meetup-januari-e-sites).*
+_This article is an in depth follow up on the [talk](https://bramsmulders.github.io/slides/atomic-design-met-pattern-lab.html#/) I gave at the [Fronteers meetup at e-sites](https://fronteers.nl/bijeenkomsten/2017/meetup-januari-e-sites)._
 
 In 2013 I wrote an article about [structuring CSS with Smacss & Sass](https://bramsmulders.com/blog/how-i-improved-my-workflow-with-smacss-sass/). Since then I read up on new techniques and changed my workflow here and there to accommodate modern web projects. Many things have changed over the years, but the basics remain the same.
 
@@ -57,13 +59,13 @@ This was Atomic design in a nutshell, I'm not going to bother you with in-depth 
 
 The most important part of component-based design and development is a pattern library, which is used as a central hub of all UI components which are used in your interface. There are many benefits to a pattern library:
 
-* Promotes consistency and cohesion
-* Speeds up a teams workflow
-* Promotes collaboration accross disciplines
-* Establish a shared design vocabulary
-* Provide essential documentation
-* Makes testing easier
-* Provides a future friendly foundation to iterate on
+- Promotes consistency and cohesion
+- Speeds up a teams workflow
+- Promotes collaboration accross disciplines
+- Establish a shared design vocabulary
+- Provide essential documentation
+- Makes testing easier
+- Provides a future friendly foundation to iterate on
 
 Since we are working with Atomic Design the choice for a pattern library was an easy one: [Pattern Lab](http://patternlab.io/)
 In the basis Pattern Lab is a static site generator and a pattern documentation and annotation tool.
@@ -84,9 +86,9 @@ Now that the HTML templating structure is in place we can move on to the next im
 Since I used the Smacss methodology in my previous article there have emerged a lot more ways to structure and organise your CSS.
 To name a few:
 
-* [BEM](http://getbem.com/)
-* [ITCSS](http://itcss.io/)
-* [SUIT CSS](https://suitcss.github.io/)
+- [BEM](http://getbem.com/)
+- [ITCSS](http://itcss.io/)
+- [SUIT CSS](https://suitcss.github.io/)
 
 A lot of them are derived from [Nicolle Sullivan](http://www.stubbornella.org/)'s OOCSS ideas. They all try to solve one thing: structuring css in an understandable, scalable manner.
 In my projects we use a hybrid of Atomic Design, BEM and ITCSS. Sounds weird and complex huh? Why not use one methodology and get it over with? Let me elaborate.
@@ -101,32 +103,32 @@ Since objects are style agnostic they have no place in the include based structu
 
 Instead of being a standalone component objects can be interlocked in other templates. They can be used in the smallest form to provide structure to an atom, but at the same time they can be used in a full blown organism. An example where a `o-layout` object can be used in multiple situations:
 
-*Atom: icon-label*
+_Atom: icon-label_
 
 ```html
 <div class="icon-label  layout">
-    <div class="icon-label__wrap-icon  layout__cell  layout__cell--fit">
-        {% raw %}{{> atoms-icon }}{% endraw %}
-    </div>
-    <div class="icon-label__label  layout__cell  layout__cell--fill">
-        <!-- label -->
-    </div>
+  <div class="icon-label__wrap-icon  layout__cell  layout__cell--fit">
+    {% raw %}{{> atoms-icon }}{% endraw %}
+  </div>
+  <div class="icon-label__label  layout__cell  layout__cell--fill">
+    <!-- label -->
+  </div>
 </div>
 ```
 
-*Molecule: product-overview*
+_Molecule: product-overview_
 
 ```html
 <div class="layout">
-    <div class="layout__cell  unit-4-12">
-        {% raw %}{{> molecules-product }}{% endraw %}
-    </div>
-    <div class="layout__cell  unit-4-12">
-        {% raw %}{{> molecules-product }}{% endraw %}
-    </div>
-    <div class="layout__cell  unit-4-12">
-        {% raw %}{{> molecules-product }}{% endraw %}
-    </div>
+  <div class="layout__cell  unit-4-12">
+    {% raw %}{{> molecules-product }}{% endraw %}
+  </div>
+  <div class="layout__cell  unit-4-12">
+    {% raw %}{{> molecules-product }}{% endraw %}
+  </div>
+  <div class="layout__cell  unit-4-12">
+    {% raw %}{{> molecules-product }}{% endraw %}
+  </div>
 </div>
 ```
 
@@ -137,14 +139,14 @@ In Atomic Design there is no logical place for these kind of objects, that is wh
 What I came up with is a hybrid system between BEM, Atomic Design & ITCSS where the best parts of these methodologies are used.
 First of all we need to establish the structure:
 
-* **Settings** - This is where all project specific settings are located. Here you will define colors, font sizes, font families, etc.
-* **Tools** - Here you define globally used functions & mixins like font-size mixins, rem helper functions, etc.
-* **Generic** - Normalize, resets, vertical rhythm & box-sizing definitions would live here.
-* **Objects** - Style agnostic objects like the media-object, grid systems, etc. (ideally prefixed with `o-`)
-* **Atoms** - Basic unclassed HTML elements and everything that cannot be made smaller.
-* **Molecules** - Combinations of atoms, components with disctint functionality.
-* **Organisms** - Combinations of atoms & molecules, sections of your interface.
-* **Utilities** - Helper classes which override everyting stated before. (ideally prefixed with `u-`)
+- **Settings** - This is where all project specific settings are located. Here you will define colors, font sizes, font families, etc.
+- **Tools** - Here you define globally used functions & mixins like font-size mixins, rem helper functions, etc.
+- **Generic** - Normalize, resets, vertical rhythm & box-sizing definitions would live here.
+- **Objects** - Style agnostic objects like the media-object, grid systems, etc. (ideally prefixed with `o-`)
+- **Atoms** - Basic unclassed HTML elements and everything that cannot be made smaller.
+- **Molecules** - Combinations of atoms, components with disctint functionality.
+- **Organisms** - Combinations of atoms & molecules, sections of your interface.
+- **Utilities** - Helper classes which override everyting stated before. (ideally prefixed with `u-`)
 
 This will enable us to structure our CSS in a more component based manner and allows us to pull in `.scss` files from their Atomic Design template directories as well. The typical `styles.scss` will look like this:
 
@@ -160,20 +162,17 @@ This will enable us to structure our CSS in a more component based manner and al
 
 @import "settings/vars";
 
-
 /*  Tools
     Global mixins & functions
 \*----------------------------------------------------------------------------*/
 
 @import "tools/mixin.font-size";
 
-
 /*  Generic
     Ground zero styles, normalize.css, resets
 \*----------------------------------------------------------------------------*/
 
 @import "generic/normalize";
-
 
 /*  Objects
     Cosmetic free design patterns
@@ -183,7 +182,6 @@ This will enable us to structure our CSS in a more component based manner and al
 @import "objects/media";
 @import "objects/layout";
 
-
 /*  Atoms
     These are basic tags, such as form labels, inputs or buttons. They also
     include more abstract elements like color palettes, fonts, and icons.
@@ -192,7 +190,6 @@ This will enable us to structure our CSS in a more component based manner and al
 @import "_patterns/atoms/typography";
 @import "_patterns/atoms/buttons";
 
-
 /*  Molecules
     Molecules are groups of elements that function together as a unit
 \*----------------------------------------------------------------------------*/
@@ -200,14 +197,12 @@ This will enable us to structure our CSS in a more component based manner and al
 @import "_patterns/molecules/product";
 @import "_patterns/molecules/list-product";
 
-
 /*  Organisms
     Organisms are groups of molecules and atoms joined together to form
     distinct sections of an interface.
 \*----------------------------------------------------------------------------*/
 
 @import "_patterns/organisms/header";
-
 
 /*  Utilities
     Helpers & overrides
@@ -225,6 +220,6 @@ After these changes to our workflow we started tinkering with applying the same 
 
 ## Credits
 
-* [Brad Frost](http://bradfrost.com/) for being awesome and for publishing the awesome book: Atomic Design
-* [Harry Roberts](http://csswizardry.com/) for his work on ITCSS and other numerous CSS ideas
-* [Brian Muenzenmeyer](http://brianmuenzenmeyer.com/) for is hard work on [Pattern Lab Node](https://github.com/pattern-lab/patternlab-node) and his help & advice
+- [Brad Frost](http://bradfrost.com/) for being awesome and for publishing the awesome book: Atomic Design
+- [Harry Roberts](http://csswizardry.com/) for his work on ITCSS and other numerous CSS ideas
+- [Brian Muenzenmeyer](http://brianmuenzenmeyer.com/) for is hard work on [Pattern Lab Node](https://github.com/pattern-lab/patternlab-node) and his help & advice
