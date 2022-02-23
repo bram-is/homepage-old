@@ -4,22 +4,20 @@
     <h2 class="c-heading  c-heading--highlight  |  h3">{{ postListHeading }}</h2>
     <p>Although I am not writing much anymore I do not want to withhold you some of my written articles:</p>
     {% endif %}
-    <div>
-      <ol class="o-list-clean  |  o-flow  o-flow--small" reversed>
-        {% for item in postListItems %}
-          {% if item.date %}
-            {% if item.date.getTime() <= global.now %}
-              <li>
-                <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-                <h3>
-                  <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
-                </h3>
-              </li>
-            {% endif %}
+    <ol class="o-list-clean  |  o-flow  o-flow--small" reversed>
+      {% for item in postListItems %}
+        {% if item.date %}
+          {% if item.date.getTime() <= global.now %}
+            <li>
+              <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
+              <h3>
+                <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
+              </h3>
+            </li>
           {% endif %}
-        {% endfor %}
-      </ol>
-      {% include "partials/components/pagination.njk" %}
-    </div>
+        {% endif %}
+      {% endfor %}
+    </ol>
+    {% include "partials/components/pagination.njk" %}
   </section>
 {% endif %}
