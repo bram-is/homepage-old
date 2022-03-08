@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: CSS Cascade Layers, another tool in the box for working with specificity & the cascade.
+title: CSS Cascade Layers
 metaDesc: CSS Cascade Layers, another tool in the box for working with specificity & the cascade. And a very welcome one at that! An overview of informative arcticles on the topic.
 date: 2022-02-22
 tags:
