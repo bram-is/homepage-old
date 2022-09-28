@@ -47,13 +47,13 @@ module.exports = function (config) {
 
     // special title og images, only for _posts
     if (inputPath.startsWith("./src/writing/")) {
-      return `https://screenshot.bram.is/${encodeURIComponent(
+      return `https://v1.screenshot.11ty.dev/${encodeURIComponent(
         `${domain}/opengraph${url}`
       )}/opengraph/_${cachebuster}`;
     }
 
     // raw screenshot
-    return `https://screenshot.bram.is/${encodeURIComponent(
+    return `https://v1.screenshot.11ty.dev/${encodeURIComponent(
       `${domain}${url}`
     )}/opengraph/_${cachebuster}`;
   });
