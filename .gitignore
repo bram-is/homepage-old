@@ -1,19 +1,12 @@
+# dependencies
+node_modules/
+
+# logs
 *.log
-npm-debug.*
-*.scssc
-*.log
-*.swp
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
 .DS_Store
-.sass-cache
-node_modules
-dist
-
-# Specifics
-
-# Hide design tokens
-src/scss/_tokens.scss
-
-# Hide compiled CSS
-src/_includes/assets/css/*
-src/_includes/assets/svg/sprite.svg
-# src/media/generated
