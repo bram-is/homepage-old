@@ -1,13 +1,13 @@
 {
-  "name": "homepage-web",
+  "name": "cms",
   "private": true,
-  "version": "1.0.0",
   "main": "package.json",
   "author": "Bram Smulders <sanity@bram.is>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
+    "dev": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
   },
   "keywords": [
     "sanity"

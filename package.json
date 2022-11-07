@@ -1,10 +1,14 @@
 {
   "name": "homepage",
-  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web:dev": "pnpm --filter web dev",
+    "web:build": "pnpm --filter web build",
+    "cms:dev": "pnpm --filter cms dev",
+    "cms:build": "pnpm --filter cms build",
+    "cms:deploy": "pnpm --filter cms deploy"
   },
   "keywords": [],
   "author": "",
