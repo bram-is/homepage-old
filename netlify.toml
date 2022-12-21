@@ -75,6 +75,11 @@
   force = true
 
 [[redirects]]
+  from = "/.well-known/webfinger"
+  to = "https://front-end.social/.well-known/webfinger?resource=acct:bramsmulders@front-end.social"
+  status = 200
+
+[[redirects]]
   from = "/blog"
   to = "/writing"
   status = 301
