@@ -27,10 +27,6 @@ I hold myself to high standards in:
 - Build tools like Webpack, Gulp, NPM scripts
 - Methods like scrum, Jira, TargetProcess, Trello, git, style- and JavaScript linters and other tools.
 
-## Company details
-
-**bram.is** is registered in the Dutch Chamber of Commerce under number 80002668. VAT number: NL003379779B98.
-
 ## Still with me?
 
 Drop me a message below. The more details about your project you include in your message, the faster I can get back to you. You’ll hear back from me within 2–4 business days.
