@@ -14,9 +14,6 @@ I maintain some [repositories on GitHub](https://github.com/bramsmulders) and Iâ
 
 Currently, Iâ€™m working as a freelance front-end UI developer at the [Government of the Netherlands](https://www.government.nl).
 
-Since the beginning of 2019, I have also started producing electronic dance music.
-You can [check out my website](https://djrebolo.com) and stream my music [on spotify](https://open.spotify.com/artist/1SNDUhWRKHjgYZ56ktCSVL?si=ZfCC9lJtTHWQ0vvrjhpOVA) or on all other major platforms.
-
 ## Experience
 
 I hold myself to high standards in:
@@ -24,10 +21,12 @@ I hold myself to high standards in:
 - Designing and creating websites.
 - Semantic HTML.
 - Modern, lightweight, and scalable CSS (incl. Sass).
-- Vanilla JavaScript (including frameworks like React, Vue, or Svelte).
+- Vanilla JavaScript (including frameworks like Astro, React, Vue, & Svelte).
 - Accessible code
 - Responsive design
-- Styleguide Driven Development (using tools like [Pattern Lab](https://patternlab.io/))
+- Build tools like Vite, Gulp & NPM.
+- Test suites like Vitest, Jest, BrowserStack & Cypress.
+- Styleguide Driven Development (using tools like Storybook, Astro Starlight & Pattern Lab)
 - Progressive Web Apps (PWA)
 - Build tools like Webpack, Gulp, NPM scripts
 - Methods like Scrum, Jira, TargetProcess, Trello, git, style- and JavaScript linters and other tools.
