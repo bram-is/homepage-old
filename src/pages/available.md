@@ -18,14 +18,16 @@ I hold myself to high standards in:
 
 - Designing and creating websites.
 - Semantic HTML.
-- Modern, lightweight and scalable CSS (incl. Sass).
-- Vanilla JavaScript (including frameworks like React, Vue or Svelte).
+- Modern, lightweight, and scalable CSS (incl. Sass).
+- Vanilla JavaScript (including frameworks like Astro, React, Vue, & Svelte).
 - Accessible code
 - Responsive design
-- Styleguide driven development (using tools like [Pattern Lab](https://patternlab.io/))
+- Build tools like Vite, Gulp & NPM.
+- Test suites like Vitest, Jest, BrowserStack & Cypress.
+- Styleguide Driven Development (using tools like Storybook, Astro Starlight & Pattern Lab)
 - Progressive Web Apps (PWA)
 - Build tools like Webpack, Gulp, NPM scripts
-- Methods like scrum, Jira, TargetProcess, Trello, git, style- and JavaScript linters and other tools.
+- Methods like Scrum, Jira, TargetProcess, Trello, git, style- and JavaScript linters and other tools.
 
 ## Still with me?
 
