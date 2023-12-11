@@ -51,6 +51,30 @@
   status = 200
 
 [[redirects]]
+  from = "https://supple.build/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "http://supple.build/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://www.supple.build/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "http://www.supple.build/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
   from = "http://bramsmulders.com/*"
   to = "https://bram.is/:splat"
   status = 301
