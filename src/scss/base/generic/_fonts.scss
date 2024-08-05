@@ -4,7 +4,7 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
+  font-display: swap;
   src: local('Ubuntu Bold'), local('Ubuntu-Bold'),
        url('/fonts/ubuntu-v14-latin-700.woff2') format('woff2');
 }
@@ -14,7 +14,7 @@
   font-family: 'Crimson Text';
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   src: local('Crimson Text Regular'), local('CrimsonText-Regular'),
        url('/fonts/crimson-text-v10-latin-regular.woff2') format('woff2');
 }
@@ -23,7 +23,7 @@
   font-family: 'Crimson Text';
   font-style: italic;
   font-weight: 400;
-  font-display: optional;
+  font-display: swap;
   src: local('Crimson Text Italic'), local('CrimsonText-Italic'),
        url('/fonts/crimson-text-v10-latin-italic.woff2') format('woff2');
 }
@@ -32,7 +32,7 @@
   font-family: 'Crimson Text';
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
+  font-display: swap;
   src: local('Crimson Text Bold'), local('CrimsonText-Bold'),
        url('/fonts/crimson-text-v10-latin-700.woff2') format('woff2');
 }
