@@ -12,7 +12,7 @@ I’ve started contributing to the web around 2007 and worked with many differen
 
 I maintain some [repositories on GitHub](https://github.com/bramsmulders) and I’ve created [Supple Kit](https://github.com/supple-kit/). It is a collection of tools that enable speedy, accessible, and powerful web development.
 
-Currently, I’m working as a freelance front-end UI developer at the [Government of the Netherlands](https://www.government.nl).
+Currently, I’m working as a freelance front-end UI developer at [Stedin](https://www.stedin.net).
 
 ## Experience
 
