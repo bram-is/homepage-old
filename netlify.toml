@@ -50,6 +50,31 @@
   to = "https://plausible.io/api/event"
   status = 200
 
+
+[[redirects]]
+  from = "https://supple.works/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "http://supple.works/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "https://www.supple.works/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "http://www.supple.works/*"
+  to = "https://bram.is/:splat"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "https://supple.build/*"
   to = "https://bram.is/:splat"
