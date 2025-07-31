@@ -1,5 +1,4 @@
 ---
-layout: layouts/contact.njk
 title: Let’s talk
 permalink: /available/index.html
 introSummary: <p>Feel free to contact me if you’d like to work together on
@@ -12,7 +11,7 @@ socialImage: /images/talk-fronteers-e-sites.jpg
 
 ## Availability
 
-I’m for hire as a senior Front-end UI developer. Currently **[I am open for new long-term projects, performance audits and consultancy from Q3 2025](#heading-still-with-me)**.
+I’m for hire as a senior Front-end UI developer. Currently **I am open for new long-term projects, performance audits and consultancy from Q3 2026**.
 
 I hold myself to high standards in:
 
@@ -28,7 +27,3 @@ I hold myself to high standards in:
 - Progressive Web Apps (PWA)
 - Build tools like Webpack, Gulp, NPM scripts
 - Methods like Scrum, Jira, TargetProcess, Trello, git, style- and JavaScript linters and other tools.
-
-## Still with me?
-
-Drop me a message below. The more details about your project you include in your message, the faster I can get back to you. You’ll hear back from me within 2–4 business days.
