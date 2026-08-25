@@ -11,7 +11,7 @@ socialImage: /images/talk-fronteers-e-sites.jpg
 
 ## Availability
 
-I’m for hire as a senior Front-end UI developer. Currently **I am open for new long-term projects, performance audits and consultancy from Q3 2026**.
+I’m for hire as a senior Front-end UI developer. Currently **I am open for new long-term projects, performance audits and consultancy from Q3 2027**.
 
 I hold myself to high standards in:
 
