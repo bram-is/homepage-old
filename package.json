@@ -30,7 +30,7 @@
   "devDependencies": {
     "@11ty/eleventy-img": "^1.0.0",
     "@erquhart/rollup-plugin-node-builtins": "^2.1.5",
-    "@netlify/plugin-lighthouse": "^2.1.2",
+    "@netlify/plugin-lighthouse": "^4.0.7",
     "@supple-kit/stylelint-config-supple": "^4.0.1",
     "autoprefixer": "^10.4.2",
     "bl": "^5.0.0",
